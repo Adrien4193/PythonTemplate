@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "template"
+dynamic = ["version"]
+description = "Python project template"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE.md" }
+authors = [{ "name" = "Adrien4193" }]
+dependencies = ["pydantic"]
+
+[project.optional-dependencies]
+dev = ["black", "isort", "pyright", "pytest", "ruff"]
+
+[project.urls]
+"Homepage" = "https://github.com/Adrien4193/PythonTemplate"
+"Bug Tracker" = "https://github.com/Adrien4193/PythonTemplate/issues"
+
+[project.scripts]
+run_stuff = "template:run"
+
+[tool.setuptools.packages.find]
+include = ["template*"]
+
+[tool.setuptools.dynamic]
+version = { attr = "template.version.VERSION" }
+
+[tool.ruff]
+ignore = ["E501"]
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 119
