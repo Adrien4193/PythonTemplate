@@ -13,7 +13,7 @@ authors = [{ "name" = "Adrien4193" }]
 dependencies = ["pydantic"]
 
 [project.optional-dependencies]
-dev = ["black", "isort", "pyright", "pytest", "ruff"]
+dev = ["mypy", "pytest", "ruff"]
 
 [project.urls]
 "Homepage" = "https://github.com/Adrien4193/PythonTemplate"
@@ -29,10 +29,8 @@ include = ["template*"]
 version = { attr = "template.version.VERSION" }
 
 [tool.ruff]
-ignore = ["E501"]
-
-[tool.isort]
-profile = "black"
-
-[tool.black]
+lint.ignore = ["E501"]
 line-length = 119
+
+[tool.mypy]
+ignore_missing_imports = true

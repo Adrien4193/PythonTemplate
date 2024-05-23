@@ -4,9 +4,9 @@ from template import Stuff
 
 
 def test_ok() -> None:
-    Stuff("test", 2)
+    Stuff(a="test", b=2)
 
 
 def test_invalid() -> None:
     with pytest.raises(Exception):
-        Stuff("test", -1)
+        Stuff(a="test", b=-1)

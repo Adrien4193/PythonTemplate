@@ -1,13 +1,11 @@
-from pydantic import PositiveInt
-from pydantic.dataclasses import dataclass
+from pydantic import PositiveInt, BaseModel
 
 
-@dataclass
-class Stuff:
+class Stuff(BaseModel):
     a: str
     b: PositiveInt
 
 
 def run() -> None:
-    data = Stuff("test", 1)
+    data = Stuff(a="test", b=1)
     print(f"It works {data}")
