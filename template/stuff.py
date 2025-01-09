@@ -1,4 +1,4 @@
-from pydantic import PositiveInt, BaseModel
+from pydantic import BaseModel, PositiveInt
 
 
 class Stuff(BaseModel):
