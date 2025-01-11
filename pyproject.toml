@@ -34,4 +34,5 @@ lint.extend-select = ["I"]
 line-length = 119
 
 [tool.mypy]
+exclude = "build"
 ignore_missing_imports = true
