@@ -7,7 +7,7 @@ name = "template"
 dynamic = ["version"]
 description = "Python project template"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.13"
 license = { file = "LICENSE.md" }
 authors = [{ "name" = "Adrien4193" }]
 dependencies = ["pydantic"]
@@ -31,8 +31,8 @@ version = { attr = "template.version.VERSION" }
 [tool.ruff]
 lint.ignore = ["E501"]
 lint.extend-select = ["I"]
-line-length = 119
+line-length = 120
 
 [tool.mypy]
 strict = true
-exclude = "build"
+exclude = ["build", "venv"]
