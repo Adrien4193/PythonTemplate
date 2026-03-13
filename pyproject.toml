@@ -25,6 +25,9 @@ run_stuff = "template:run"
 [tool.setuptools.packages.find]
 include = ["template*"]
 
+[tool.setuptools.package-data]
+template = ["py.typed"]
+
 [tool.setuptools.dynamic]
 version = { attr = "template.version.VERSION" }
 
